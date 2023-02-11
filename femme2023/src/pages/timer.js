@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./timer.css";
+import { Button } from "@mui/material";
 
 function Timer() {
   const [secondsLeft, setSecondsLeft] = useState(25 * 60);
@@ -27,7 +28,9 @@ function Timer() {
   return (
     <div className="pomodoro">
       <h1>Pomodoro Timer</h1>
-      <button onClick={start}>start</button>
+      <Button variant="contained" onClick={start}>
+        Begin
+      </Button>
       <div>{secondsLeft} seconds left</div>
     </div>
   );
